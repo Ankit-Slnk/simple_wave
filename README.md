@@ -35,6 +35,7 @@ SimpleWaveWidget(
     waveColor: Colors.blue, // this changes color of wave
     amplitude: 50, // this changes height of wave
     waveMilliseconds: 5000, //this changes speed of wave
+    numberOfWave: 10, //this changes number of waves
 )
 ```
 

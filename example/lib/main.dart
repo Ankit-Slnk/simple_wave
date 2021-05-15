@@ -109,6 +109,7 @@ class SimpleWaveInBox extends StatelessWidget {
             waveColor: Colors.blue, // this changes color of wave
             amplitude: 50, // this changes height of wave
             waveMilliseconds: 5000, //this changes speed of wave
+            numberOfWave: 10, //this changes number of waves
           ),
         ),
       ),
@@ -140,6 +141,7 @@ class _SimpleWavePlaygroundState extends State<SimpleWavePlayground> {
   int b = 255;
   double waveHeight = 300;
   double waveWidth = 200;
+  int numberOfWave = 3;
 
   @override
   Widget build(BuildContext context) {
@@ -155,6 +157,7 @@ class _SimpleWavePlaygroundState extends State<SimpleWavePlayground> {
             waveHeight: waveHeight,
             waveMilliseconds: 1000,
             waveWidth: waveWidth,
+            numberOfWave: numberOfWave,
           ),
           body(),
         ],
@@ -225,6 +228,16 @@ class _SimpleWavePlaygroundState extends State<SimpleWavePlayground> {
             value: waveWidth,
             onChanged: (value) {
               waveWidth = value;
+              _notify();
+            },
+          ),
+          textView("Number of Waves"),
+          Slider(
+            min: 1,
+            max: 100,
+            value: numberOfWave.toDouble(),
+            onChanged: (value) {
+              numberOfWave = value.toInt();
               _notify();
             },
           ),

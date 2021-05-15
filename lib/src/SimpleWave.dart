@@ -8,6 +8,7 @@ class SimpleWaveWidget extends StatefulWidget {
   double waveWidth;
   double waveHeight;
   int waveMilliseconds;
+  int numberOfWave;
 
   SimpleWaveWidget({
     this.waveColor = Colors.white,
@@ -15,6 +16,7 @@ class SimpleWaveWidget extends StatefulWidget {
     this.waveWidth,
     this.waveHeight,
     this.waveMilliseconds = 1000,
+    this.numberOfWave = 3,
   });
 
   @override
@@ -59,6 +61,7 @@ class _WaveWidgetState extends State<SimpleWaveWidget>
                   animation: _animationController,
                   waveColor: widget.waveColor,
                   amplitude: widget.amplitude,
+                  numberOfWave: widget.numberOfWave,
                 ),
               );
             },
@@ -73,11 +76,13 @@ class WaveWidgetPainter extends CustomPainter {
   Animation<double> animation;
   Color waveColor;
   double amplitude;
+  int numberOfWave;
 
   WaveWidgetPainter({
     @required this.animation,
     @required this.waveColor,
     @required this.amplitude,
+    @required this.numberOfWave,
   });
 
   @override
@@ -90,7 +95,8 @@ class WaveWidgetPainter extends CustomPainter {
     for (double i = 0.0; i < size.width; i++) {
       path.lineTo(
         i,
-        sin((i / size.width * 3 * pi) + (animation.value * 2 * pi)) * amplitude,
+        sin((i / size.width * numberOfWave * pi) + (animation.value * 2 * pi)) *
+            amplitude,
       );
     }
 
