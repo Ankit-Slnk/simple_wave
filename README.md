@@ -4,6 +4,10 @@
 
 A Flutter plugin for wave animation.
 
+![simple_wave](simple_wave.png)
+
+![simple_wave](simple_wave.gif)
+
 ## Usage
 
 To use this plugin, add `simple_wave` as a [dependency in your pubspec.yaml file](https://flutter.dev/docs/development/packages-and-plugins/using-packages/).
