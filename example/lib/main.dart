@@ -253,6 +253,9 @@ class SimpleWaterWave extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Text("Simple Water Wave"),
+      ),
       body: Stack(
         children: [
           SimpleWaveWidget(
