@@ -1,6 +1,6 @@
 name: simple_wave
 description: A Flutter plugin for wave animation.
-version: 0.0.1
+version: 0.0.2
 homepage: https://github.com/Ankit-Slnk/simple_wave
 
 environment:
