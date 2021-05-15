@@ -1,7 +1,6 @@
 name: simple_wave
 description: A new flutter plugin project.
 version: 0.0.1
-author: Ankit Solanki
 homepage: https://github.com/Ankit-Slnk/simple_wave
 
 environment:
