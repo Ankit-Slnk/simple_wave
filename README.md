@@ -1,6 +1,6 @@
 # simple_wave
 
-<!-- [![pub package](https://img.shields.io/pub/v/simple_wave.svg)](https://pub.dev/packages/simple_wave) -->
+[![pub package](https://img.shields.io/pub/v/simple_wave.svg)](https://pub.dev/packages/simple_wave)
 
 A Flutter plugin for wave animation.
 
@@ -34,3 +34,4 @@ SimpleWaveWidget(
 )
 ```
 
+Checkout [this package demo](https://flutter-web-wave.netlify.app/#/) in [Flutter Web](https://flutter.dev/docs/get-started/web).
