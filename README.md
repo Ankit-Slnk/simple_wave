@@ -2,6 +2,8 @@
 
 [![pub package](https://img.shields.io/pub/v/simple_wave.svg)](https://pub.dev/packages/simple_wave)
 
+<a href="https://www.producthunt.com/posts/simple_wave?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-simple_wave" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=296961&theme=light" alt="simple_wave - A Flutter plugin for wave animation. | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" /></a>
+
 A Flutter plugin for wave animation.
 
 ![simple_wave](simple_wave.png)
