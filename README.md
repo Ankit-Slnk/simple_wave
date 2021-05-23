@@ -42,3 +42,5 @@ SimpleWaveWidget(
 ```
 
 Checkout [this package demo](https://flutter-web-wave.netlify.app/#/) in [Flutter Web](https://flutter.dev/docs/get-started/web).
+
+View [Medium story](https://ankit-solanki.medium.com/simple-wave-642028811e36)
