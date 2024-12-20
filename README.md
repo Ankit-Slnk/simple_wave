@@ -12,7 +12,7 @@ A Flutter plugin for wave animation.
 
 ## Usage
 
-To use this plugin, add `simple_wave` as a [dependency in your pubspec.yaml file](https://flutter.dev/docs/development/packages-and-plugins/using-packages/).
+To use this plugin, add [`simple_wave`](https://pub.dev/packages/simple_wave) as a [dependency in your pubspec.yaml file](https://flutter.dev/docs/development/packages-and-plugins/using-packages/).
 
 ## Example
 
@@ -25,10 +25,13 @@ import 'package:simple_wave/simple_wave.dart';
 Then invoke the `SimpleWaveWidget` method to create simple wave.
 
 ``` dart
-SimpleWaveWidget()
+SimpleWaveWidget(
+    waveHeight: MediaQuery.sizeOf(context).height,
+    waveWidth: MediaQuery.sizeOf(context).width,
+)
 ```
 
-The `SimpleWaveWidget` method also takes optional `waveWidth`, `waveHeight`, `waveColor`, `amplitude`, `waveMilliseconds` arguments.
+The `SimpleWaveWidget` method takes required `waveWidth`, `waveHeight` and optional `waveColor`, `amplitude`, `waveMilliseconds` arguments.
 
 ``` dart
 SimpleWaveWidget(

@@ -3,18 +3,18 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 
 class SimpleWaveWidget extends StatefulWidget {
-  Color waveColor;
-  double amplitude;
-  double waveWidth;
-  double waveHeight;
-  int waveMilliseconds;
-  int numberOfWave;
+  final Color waveColor;
+  final double amplitude;
+  final double waveWidth;
+  final double waveHeight;
+  final int waveMilliseconds;
+  final int numberOfWave;
 
-  SimpleWaveWidget({
+  const SimpleWaveWidget({
+    required this.waveWidth,
+    required this.waveHeight,
     this.waveColor = Colors.white,
     this.amplitude = 10,
-    this.waveWidth,
-    this.waveHeight,
     this.waveMilliseconds = 1000,
     this.numberOfWave = 3,
   });
@@ -25,7 +25,7 @@ class SimpleWaveWidget extends StatefulWidget {
 
 class _WaveWidgetState extends State<SimpleWaveWidget>
     with TickerProviderStateMixin {
-  AnimationController _animationController;
+  late AnimationController _animationController;
 
   @override
   void initState() {
@@ -51,11 +51,11 @@ class _WaveWidgetState extends State<SimpleWaveWidget>
       children: [
         Spacer(),
         Container(
-          width: widget.waveWidth ?? MediaQuery.of(context).size.width,
-          height: widget.waveHeight ?? MediaQuery.of(context).size.height / 3,
+          width: widget.waveWidth,
+          height: widget.waveHeight,
           child: AnimatedBuilder(
             animation: _animationController,
-            builder: (BuildContext context, Widget child) {
+            builder: (BuildContext context, Widget? child) {
               return CustomPaint(
                 painter: WaveWidgetPainter(
                   animation: _animationController,
@@ -79,10 +79,10 @@ class WaveWidgetPainter extends CustomPainter {
   int numberOfWave;
 
   WaveWidgetPainter({
-    @required this.animation,
-    @required this.waveColor,
-    @required this.amplitude,
-    @required this.numberOfWave,
+    required this.animation,
+    required this.waveColor,
+    required this.amplitude,
+    required this.numberOfWave,
   });
 
   @override

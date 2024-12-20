@@ -124,7 +124,10 @@ class SimpleWaveFullScreen extends StatelessWidget {
       appBar: AppBar(
         title: Text("Simple Wave Full Screen"),
       ),
-      body: SimpleWaveWidget(),
+      body: SimpleWaveWidget(
+        waveHeight: MediaQuery.sizeOf(context).height,
+        waveWidth: MediaQuery.sizeOf(context).width,
+      ),
     );
   }
 }
@@ -272,15 +275,21 @@ class SimpleWaterWave extends StatelessWidget {
       body: Stack(
         children: [
           SimpleWaveWidget(
+            waveHeight: MediaQuery.sizeOf(context).height,
+            waveWidth: MediaQuery.sizeOf(context).width,
             waveColor: Colors.blue.withOpacity(0.7),
             amplitude: 20,
           ),
           SimpleWaveWidget(
+            waveHeight: MediaQuery.sizeOf(context).height,
+            waveWidth: MediaQuery.sizeOf(context).width,
             waveColor: Colors.blue.withOpacity(0.5),
             amplitude: 23,
             waveMilliseconds: 3000,
           ),
           SimpleWaveWidget(
+            waveHeight: MediaQuery.sizeOf(context).height,
+            waveWidth: MediaQuery.sizeOf(context).width,
             waveColor: Colors.blue,
             waveMilliseconds: 2500,
           )
