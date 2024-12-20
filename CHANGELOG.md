@@ -1,3 +1,7 @@
+## 0.0.4
+
+* Dart 3 compatible.
+
 ## 0.0.3
 
 * New argument `numberOfWave` to change number of waves.
